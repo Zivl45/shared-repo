@@ -1,0 +1,12 @@
+apiVersion: codefresh.io/v1beta1
+kind: PromotionPolicy
+metadata:
+  name: pp1
+spec:
+  priority: 1
+  selector:
+    targetEnvironment:
+      types:
+        - NON_PROD
+  policy:
+    preAction: promotion1
