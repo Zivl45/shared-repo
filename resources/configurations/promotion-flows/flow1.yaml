@@ -7,13 +7,8 @@ metadata:
 spec:
   triggerEnvironment: dev
   steps:
-    - environment: staging
-      dependsOn:
-        - dev
-      policy:
-        action: commit
     - environment: prod
       dependsOn:
-        - staging
+        - dev
       policy:
         action: commit
