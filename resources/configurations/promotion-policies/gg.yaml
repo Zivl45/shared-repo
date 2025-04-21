@@ -1,0 +1,14 @@
+apiVersion: codefresh.io/v1beta1
+kind: PromotionPolicy
+metadata:
+  name: gg
+spec:
+  priority: 2
+  selector:
+    product:
+      names:
+        - demo-trioapp-2
+  policy:
+    action: commit
+    preAction: promotion1
+    postAction: promotion1
