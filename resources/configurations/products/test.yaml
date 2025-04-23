@@ -1,5 +1,5 @@
 apiVersion: codefresh.io/v1beta2
-kind: Product
+kind: Product242
 metadata:
   name: test
 spec:
@@ -8,6 +8,6 @@ spec:
       gitTriggerSelectors:
         - key: commitMessage
           operator: In
-          values:
-            - hey
-  concurrency: queue
+          values: []
+
+  concurrency: terminate
