@@ -3,7 +3,6 @@ kind: Product
 metadata:
   name: test
 spec:
-  moshe: ziv
   promotionFlows:
     - name: flow2
       gitTriggerSelectors:
