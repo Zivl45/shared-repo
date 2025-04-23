@@ -3,4 +3,19 @@ kind: Product
 metadata:
   name: demo-trioapp-2
 spec:
-  concurrency: queue
+  promotionFlows:
+    - name: flow2
+      gitTriggerSelectors:
+        - key: commitMessage
+          operator: In
+          values:
+            - merge
+  promotionTemplate:
+    versionSource:
+      file: version.yaml
+      jsonPath: $.version
+    promotion:
+      version.yaml:
+        jsonPaths:
+          - $.version
+  concurrency: terminate
