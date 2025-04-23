@@ -1,0 +1,13 @@
+apiVersion: codefresh.io/v1beta2
+kind: Product
+metadata:
+  name: test
+spec:
+  promotionFlows:
+    - name: flow2
+      gitTriggerSelectors:
+        - key: commitMessage
+          operator: In
+          values:
+            - hey
+  concurrency: queue
