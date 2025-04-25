@@ -1,5 +1,5 @@
 apiVersion: codefresh.io/v1beta2
-kind: Product242
+kind: Product
 metadata:
   name: test
 spec:
